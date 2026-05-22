@@ -1,25 +1,55 @@
 # ✨ AuraDesk
 
-A modern virtual productivity workspace built using HTML, CSS, and JavaScript.
+Aesthetic virtual productivity workspace built using **HTML, CSS, and JavaScript**.  
+Designed for focused study sessions with a clean, distraction-free UI.
+
+---
 
 ## 🚀 Features
-- Pomodoro Timer
-- Task Manager
-- Glassmorphism UI
-- Responsive Design
-- Dark Aesthetic Theme
 
-## 🛠️ Technologies Used
+- ⏱️ Custom Focus Timer (Pomodoro + custom time)
+- 📝 Task Manager (add/delete tasks)
+- 🌙 Dark & Light Mode (soft aesthetic theme)
+- 💡 Simple and clean UI for focused study
+- ⚡ Fast and lightweight (no frameworks)
+
+---
+
+## 🎨 UI Themes
+
+### 🌙 Dark Mode
+- Focused, calm night-study vibe
+- Purple + dark gradient aesthetic
+
+### 🌷 Light Mode
+- Soft girl aesthetic
+- Pastel pink, lavender, and soft blue tones
+
+---
+
+## 🛠️ Tech Stack
+
 - HTML
 - CSS
-- JavaScript
+- JavaScript (Vanilla)
 
-## 📸 Preview
-(Add screenshots here)
+---
 
-## 💡 Future Improvements
-- Ambient Music
-- Dark/Light Mode
-- Study Streak Tracker
-- Quotes API# AuraDesk-
-An aesthetic virtual productivity workspace built using HTML, CSS, and JavaScript featuring a Pomodoro timer, task manager, and modern glassmorphism UI.
+## 💡 Purpose
+
+AuraDesk helps users stay focused, manage tasks, and track study sessions in a minimal and aesthetic environment.
+
+---
+
+## 📈 Future Improvements
+
+- LocalStorage support (save tasks & timer)
+- Productivity streak tracker
+- Fullscreen focus mode
+- Better dashboard analytics
+
+---
+
+## 👩‍💻 Author
+
+Built by a beginner developer learning frontend development and DSA.
