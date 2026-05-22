@@ -2,16 +2,27 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family:Arial;
 }
 
 body{
   height:100vh;
-  background:linear-gradient(135deg,#1e1e2f,#2c3e50);
   display:flex;
   justify-content:center;
   align-items:center;
+  transition:0.3s;
+}
+
+/* DARK THEME */
+body.dark{
+  background:linear-gradient(135deg,#0f0f1a,#1a1a2e);
   color:white;
+}
+
+/* LIGHT (soft girl) */
+body.light{
+  background:linear-gradient(135deg,#ffe6f0,#e6f0ff);
+  color:#333;
 }
 
 .container{
@@ -19,38 +30,52 @@ body{
   max-width:500px;
 }
 
-h1{
-  text-align:center;
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
   margin-bottom:20px;
 }
 
 .card{
-  background:rgba(255,255,255,0.1);
-  backdrop-filter:blur(10px);
   padding:20px;
   border-radius:20px;
   margin-bottom:20px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.1);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+body.light .card{
+  background:rgba(255,255,255,0.6);
 }
 
 #timer{
   text-align:center;
-  font-size:60px;
-  margin:20px 0;
+  font-size:55px;
+  margin:15px 0;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  margin-top:10px;
 }
 
 .buttons{
   display:flex;
-  justify-content:center;
   gap:10px;
+  justify-content:center;
 }
 
 button{
-  padding:10px 20px;
+  padding:10px 15px;
   border:none;
   border-radius:10px;
   cursor:pointer;
-  transition:0.3s;
+  transition:0.2s;
 }
 
 button:hover{
@@ -63,23 +88,20 @@ button:hover{
   margin-top:10px;
 }
 
-input{
-  flex:1;
-  padding:10px;
-  border:none;
-  border-radius:10px;
-}
-
 ul{
-  margin-top:15px;
+  margin-top:10px;
   list-style:none;
 }
 
 li{
-  background:rgba(255,255,255,0.1);
-  padding:10px;
-  border-radius:10px;
-  margin-top:10px;
   display:flex;
   justify-content:space-between;
+  padding:10px;
+  margin-top:10px;
+  border-radius:10px;
+  background:rgba(0,0,0,0.1);
+}
+
+body.light li{
+  background:rgba(255,255,255,0.7);
 }
