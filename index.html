@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AuraDesk</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraDesk ✨</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
+<div class="container">
+
+  <div class="top">
     <h1>AuraDesk ✨</h1>
-
-    <!-- Timer -->
-    <div class="card">
-      <h2>Pomodoro Timer</h2>
-      <h1 id="timer">25:00</h1>
-
-      <div class="buttons">
-        <button onclick="startTimer()">Start</button>
-        <button onclick="pauseTimer()">Pause</button>
-        <button onclick="resetTimer()">Reset</button>
-      </div>
-    </div>
-
-    <!-- Todo -->
-    <div class="card">
-      <h2>Today's Tasks</h2>
-
-      <div class="task-input">
-        <input type="text" id="taskInput" placeholder="Add task...">
-        <button onclick="addTask()">Add</button>
-      </div>
-
-      <ul id="taskList"></ul>
-    </div>
-
+    <button id="themeToggle">🌙</button>
   </div>
 
-  <script src="script.js"></script>
+  <!-- TIMER -->
+  <div class="card">
+    <h2>Focus Timer</h2>
+
+    <input type="number" id="minutesInput" placeholder="Set minutes (e.g. 25)">
+    <button onclick="setTimer()">Set</button>
+
+    <h1 id="timer">25:00</h1>
+
+    <div class="buttons">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="pauseTimer()">Pause</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+  </div>
+
+  <!-- TASKS -->
+  <div class="card">
+    <h2>Tasks</h2>
+
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Add task...">
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
