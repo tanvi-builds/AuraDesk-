@@ -1,72 +1,64 @@
-// THEME TOGGLE
-const toggleBtn = document.getElementById("themeToggle");
+let body = document.body;
+let toggle = document.getElementById("toggle");
 
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  document.body.classList.toggle("light");
+toggle.onclick = () => {
+  body.classList.toggle("light");
+  body.classList.toggle("dark");
 
-  if(document.body.classList.contains("dark")){
-    toggleBtn.innerText = "☀️";
-  } else {
-    toggleBtn.innerText = "🌙";
-  }
-});
+  toggle.innerText = body.classList.contains("dark") ? "🌙" : "☀️";
+};
 
-// DEFAULT THEME
-document.body.classList.add("dark");
-
-
-// TIMER LOGIC
+/* TIMER */
 let time = 1500;
 let timer;
 
-function updateTimer(){
-  let min = Math.floor(time / 60);
-  let sec = time % 60;
-  sec = sec < 10 ? "0"+sec : sec;
-  document.getElementById("timer").innerText = `${min}:${sec}`;
+function update(){
+  let m = Math.floor(time/60);
+  let s = time%60;
+  if(s<10) s="0"+s;
+  document.getElementById("timer").innerText = `${m}:${s}`;
 }
 
-function startTimer(){
-  timer = setInterval(() => {
-    if(time > 0){
+function start(){
+  timer = setInterval(()=>{
+    if(time>0){
       time--;
-      updateTimer();
+      update();
     }
   },1000);
 }
 
-function pauseTimer(){
+function pause(){
   clearInterval(timer);
 }
 
-function resetTimer(){
+function reset(){
   clearInterval(timer);
   time = 1500;
-  updateTimer();
+  update();
 }
 
-// CUSTOM TIMER
 function setTimer(){
-  let input = document.getElementById("minutesInput").value;
-  if(input === "" || input <= 0) return;
-
-  time = input * 60;
-  updateTimer();
+  let val = document.getElementById("minInput").value;
+  if(val>0){
+    time = val*60;
+    update();
+  }
 }
 
-
-// TASKS
+/* TASKS */
 function addTask(){
   let input = document.getElementById("taskInput");
-  if(input.value === "") return;
+  if(input.value==="") return;
 
   let li = document.createElement("li");
-  li.innerHTML = `${input.value} <button onclick="this.parentElement.remove()">X</button>`;
+  li.innerHTML = input.value + " ❌";
+  li.onclick = ()=>li.remove();
 
-  document.getElementById("taskList").appendChild(li);
-
-  input.value = "";
+  document.getElementById("list").appendChild(li);
+  input.value="";
 }
 
-updateTimer();
+update();
+    
+ 
