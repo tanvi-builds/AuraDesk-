@@ -6,41 +6,37 @@
   <title>AuraDesk ✨</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark">
 
 <div class="container">
 
   <div class="top">
     <h1>AuraDesk ✨</h1>
-    <button id="themeToggle">🌙</button>
+    <button id="toggle">🌙</button>
   </div>
 
   <!-- TIMER -->
   <div class="card">
     <h2>Focus Timer</h2>
 
-    <input type="number" id="minutesInput" placeholder="Set minutes (e.g. 25)">
+    <input id="minInput" type="number" placeholder="Set minutes">
     <button onclick="setTimer()">Set</button>
 
-    <h1 id="timer">25:00</h1>
+    <div id="timer">25:00</div>
 
-    <div class="buttons">
-      <button onclick="startTimer()">Start</button>
-      <button onclick="pauseTimer()">Pause</button>
-      <button onclick="resetTimer()">Reset</button>
-    </div>
+    <button onclick="start()">Start</button>
+    <button onclick="pause()">Pause</button>
+    <button onclick="reset()">Reset</button>
   </div>
 
   <!-- TASKS -->
   <div class="card">
     <h2>Tasks</h2>
 
-    <div class="task-input">
-      <input type="text" id="taskInput" placeholder="Add task...">
-      <button onclick="addTask()">Add</button>
-    </div>
+    <input id="taskInput" placeholder="Add task">
+    <button onclick="addTask()">Add</button>
 
-    <ul id="taskList"></ul>
+    <ul id="list"></ul>
   </div>
 
 </div>
